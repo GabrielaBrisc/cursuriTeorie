@@ -11,9 +11,8 @@ id = atribut
 first-name = valoarea atributului 
 """
 ### initializam chrome
-s = Service(ChromeDriverManager().install())
-
-chrome = webdriver.Chrome(service=s)
+# s = Service(ChromeDriverManager().install())
+# chrome = webdriver.Chrome(service=s)
 
 ###incepand cu 4.6.0 nu mai este nevoie sa facem setarile de la liniile de mai sus
 chrome = webdriver.Chrome()

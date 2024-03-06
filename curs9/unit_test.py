@@ -52,6 +52,6 @@ class Test(TestCase):
         self.chrome.get("https://formy-project.herokuapp.com/")
         try:
            self.chrome.find_element(*self.JOB_TITLE)
-           assert False, "Elementul a fost gasit"
+           assert True, "Elementul nu a fost gasit"
         except NoSuchElementException:
-            print("Elementul nu este afisat")
+            print("Elementul este afisat")

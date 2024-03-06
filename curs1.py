@@ -1,4 +1,4 @@
-print("Hello World")
+# print("Hello World")
 
 #comentarii = linii din codul sursa care nu sunt extecutate (menite pentru adnotari/explicatii)
 # comentariu pe o sg linie
@@ -38,7 +38,7 @@ Constantele sunt spatii de mem care nu isi schimba valoarea
 !!! In Python exista doar ca si concept ideea de constanta
 """
 
-#declarare si initializare de variabile
+# declarare si initializare de variabile
 # model_masina = "v60"
 # model_Masina = "v10"
 # print(model_masina)
@@ -59,16 +59,17 @@ Constantele sunt spatii de mem care nu isi schimba valoarea
 # print("1. ",type(model_masina))
 # model_masina = int("330")
 # print("2. ",type(model_masina))
-# #
+# # #
 # print("a+b ca string =", "a" + "b")
 # print("3+3 ca int =", 3+3)
 # print("3+3 ca string =", "3" + "3")
 #de la nr la string poti face trecerea, invers nu
 
 #b = int("a") -> Nu se poate face cast (trecerea de la un tip la altul) la int
-# v = str(3 + 3)
-# print(v)
-# print("Cast de la int la string: ",type(v))
+# v = "3"+"3" #si asa e str doar ca le uneste, nu le aduna (33)
+v =str(3 + 3)
+print(v)
+print("Cast de la int la string: ",type(v))
 
 # x,y,z = "Luni", "Marti", 3
 # print(x,y,z)
@@ -137,15 +138,15 @@ IntPUT() = funtie python care ne ajuta sa afisam ce ii dam intre paranteze in co
   my_str[start_pos:end_pos:step]
 """
 
-# exemple = "Februarie"
-# print(len(exemple))
+exemple = "Februarie"
+print(len(exemple))
 # print(exemple[0]) #F
 # print(exemple[1]) #e
 # print(exemple[2:5]) #bru
 # print(exemple[-1]) #e
 # print(exemple[-3:-1]) #ri
-# print(exemple[::-1])  #eiraurbeF
-# print(exemple[1::])  #ebruarie
+print(exemple[::-1])  #eiraurbeF
+print(exemple[1::])  #ebruarie
 
 #Index             0  1  2  3  4  5  6  7  8
 #caracter          F  e  b  r  u  a  r  i  e

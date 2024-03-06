@@ -14,29 +14,34 @@ class Alerts(unittest.TestCase):
 
 
     ###se exe inainte de fiecare test
+    #o met care exista in Test Case si noi o suprascriem
+    # ne definim un browser
     def setUp(self):
         self.chrome = webdriver.Chrome()
         self.chrome.maximize_window()
         self.chrome.implicitly_wait(3)
         self.chrome.get("https://the-internet.herokuapp.com/javascript_alerts")
 
+    # se exe dupa fiecare test in parte
     def tearDown(self):
         self.chrome.quit()
-
+    ### Alert are doar ok
     def test_alert(self):
         ###pt ca e tupla punem *
         self.chrome.find_element(*self.ALERT_BUTTON).click()
         obj = self.chrome.switch_to.alert #ne am mutat de pe pg noastra pe fereastra de alert
-        ### si am salvat fereastra de alerta intr o variabila (obj)
+        ##  si am salvat fereastra/pop up ul de alerta intr o variabila (obj)
         print(f"Mesaj alerta: {obj.text}")
         sleep(5)
 
         obj.accept() ## aceasta met este echivalentul click ului pe butonul "ok" din alerta
         # sleep(5)
         expected_text = "You successfully clicked an alert"
+        #actual_text este textul afisat dupa click
         actual_text = self.chrome.find_element(*self.RESULT_MESSAGE).text
         self.assertEqual(actual_text, expected_text, "Mesajul nu este cel dorit")
 
+    ### Confirm are ok / cancel
     def test_confirm_ok(self):
         self.chrome.find_element(*self.CONFIRM_BUTTON).click()
         obj = self.chrome.switch_to.alert
@@ -56,7 +61,9 @@ class Alerts(unittest.TestCase):
         expected_text = "You clicked: Cancel"
         actual_text = self.chrome.find_element(*self.RESULT_MESSAGE).text
         self.assertEqual(actual_text, expected_text, "Mesajul nu este cel dorit")
-    @unittest.skip
+
+    ### Prompt are input + ok / cancel
+    # @unittest.skip
     def test_prompt_text_ok(self):
         self.chrome.find_element(*self.PROMPT_BUTTON).click()
         obj = self.chrome.switch_to.alert
@@ -67,6 +74,18 @@ class Alerts(unittest.TestCase):
         sleep(2)
         obj.accept()
         expected_text = f"You entered: {text}"
+        #luam textul din acel element:
+        actual_text = self.chrome.find_element(*self.RESULT_MESSAGE).text
+        self.assertEqual(actual_text, expected_text, "Mesajul nu este cel dorit")
+
+    def test_prompt_cancel(self):
+        self.chrome.find_element(*self.PROMPT_BUTTON).click()
+        obj = self.chrome.switch_to.alert
+        print(f"Mesaj alerta: {obj.text}")
+        sleep(3)
+        obj.dismiss()
+        expected_text = f"You entered: null"
+        #luam textul din acel element:
         actual_text = self.chrome.find_element(*self.RESULT_MESSAGE).text
         self.assertEqual(actual_text, expected_text, "Mesajul nu este cel dorit")
 

@@ -125,8 +125,8 @@ range -> functie care defineste un interval
 # for i in range(3,12): #(A,B)
 #     print(i)
 
-# for i in range(0,12,2,):
-#     print(i)
+for i in range(4,0,-2):
+    print(i)
 
 # for i in range(12,2,-1):
 #     print(i)

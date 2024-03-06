@@ -11,16 +11,16 @@ atribuire = asignagre = proces prin care salvam info la adr de mem identif cu un
 """
 
 # print("*"*5,"Operatori de atribuire","*"*5)
-# x = 5
-# print("x =",x)
-# x += 3
-# print("x += 3: ", x)
-# x -= 4
-# print("x -= 4: ", x)
-# x = 10
-# print("x= 10: ", x)
-# x /= 10
-# print("x /= 10: ", x)
+x = 5
+print("x =",x)
+x += 3
+print("x += 3: ", x)
+x -= 4
+print("x -= 4: ", x)
+x = 10
+print("x= 10: ", x)
+x /= 10
+print("x /= 10: ", x)
 
 # #OPERATORII ARITMETICI
 # """
@@ -85,46 +85,46 @@ atribuire = asignagre = proces prin care salvam info la adr de mem identif cu un
 # print(f"{x}<{y}",x<y)
 # print(f"{x}>={y}",x>=y)
 # print(f"{x}<={y}",x<=y)
-
-""" Flow control  """
-nota_de_trecere = 4.5
-nota = float(input("Intro nota: "))
-
-if nota > nota_de_trecere:
-    print(f"felicitari, ai luat nota {nota}")
-else:
-    print(f"ne pare rau ai picat cu nota {nota}")
-#------------------------------------------------------------------------------#
-#### Flow Control ####
-print("*"*5,"Flow Control","*"*5)
-print("*"*3,"If Simplu","*"*3)
-
-nota_de_trecere = 4.5
-# nota = float(input("Introduce-ti nota: "))
-nota = 6
-
-if nota >= nota_de_trecere:
-    print(f"Felicitari, ai luat nota {nota}")
-print("Am trecut de if")
-
-print("*"*3,"If else","*"*3)
-
-if nota >= nota_de_trecere:
-    print(f"Felicitari, ai luat nota {nota}")
-else:
-    print(f"Ne pare rau dar ai picat examenul cu nota {nota}")
-
-print("*"*3,"If elif ... else","*"*3)
-
-optiune = input("Alege o optiune [0,1,2]: ")
-
-if optiune == 0:
-    print("ai ales 0")
-elif optiune == 1:
-    print("ai ales 1")
-elif optiune == 2:
-    print("ai ales 2")
-else:
-    print("Nu ai ales nici o optiune valida")
+#
+# """ Flow control  """
+# nota_de_trecere = 4.5
+# nota = float(input("Intro nota: "))
+#
+# if nota > nota_de_trecere:
+#     print(f"felicitari, ai luat nota {nota}")
+# else:
+#     print(f"ne pare rau ai picat cu nota {nota}")
+# #------------------------------------------------------------------------------#
+# #### Flow Control ####
+# print("*"*5,"Flow Control","*"*5)
+# print("*"*3,"If Simplu","*"*3)
+#
+# nota_de_trecere = 4.5
+# # nota = float(input("Introduce-ti nota: "))
+# nota = 6
+#
+# if nota >= nota_de_trecere:
+#     print(f"Felicitari, ai luat nota {nota}")
+# print("Am trecut de if")
+#
+# print("*"*3,"If else","*"*3)
+#
+# if nota >= nota_de_trecere:
+#     print(f"Felicitari, ai luat nota {nota}")
+# else:
+#     print(f"Ne pare rau dar ai picat examenul cu nota {nota}")
+#
+# print("*"*3,"If elif ... else","*"*3)
+#
+# optiune = input("Alege o optiune [0,1,2]: ")
+#
+# if optiune == 0:
+#     print("ai ales 0")
+# elif optiune == 1:
+#     print("ai ales 1")
+# elif optiune == 2:
+#     print("ai ales 2")
+# else:
+#     print("Nu ai ales nici o optiune valida")
 
 

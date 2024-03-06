@@ -28,11 +28,11 @@
 elem unei liste au o anumita ordine care nu se schimba
 daca adaug un elem nou, acesta va fi pus la finalul listei
 !!! atentie - exista anum metode in liste care pot schimba ordinea elem in lista 
-"""
+# """
 # masini = ["Audi" , "VW", "BMW", "Skoda" , "Mercedes" ]
 # print(masini)
-
-### Accesare elemente
+#
+# ## Accesare elemente
 # print("masini[0]=", masini[0])
 # print("masini[-1]=", masini[-1])
 # print("masini[:4]=", masini[:4])
@@ -270,3 +270,7 @@ daca adaug un elem nou, acesta va fi pus la finalul listei
 # tuple2 =(1,2,3)
 # x,y,z = tuple2
 # print(x,y,z)
+
+my_str = "Python"
+result = my_str[::2]
+print(result)

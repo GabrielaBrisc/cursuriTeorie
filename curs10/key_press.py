@@ -44,5 +44,6 @@ class Keyboard(unittest.TestCase):
         ## daca nu punem si aceasta instr si am fol key_down nu v-a functiona
         action.key_up(Keys.SHIFT).perform()
         # sleep(3)
+        #stergem ce avem scris in field ul de first name
         first_name.send_keys(Keys.BACK_SPACE)
         # sleep(4)
